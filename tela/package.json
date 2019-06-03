@@ -10,6 +10,9 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "create-functional-component": "scripts/create_functional_component.sh",
+    "create-class-component": "scripts/create_class_component.sh",
+    "create-container": "scripts/create_container.sh",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
