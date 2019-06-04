@@ -7,7 +7,6 @@ const navbar = props => {
   return (
     <div className={classes.Navbar}>
       <NavMenu />
-      <UserMenu />
     </div>
   );
 };

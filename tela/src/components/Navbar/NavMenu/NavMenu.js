@@ -2,32 +2,41 @@ import React, { Component } from "react";
 import classes from "./NavMenu.module.scss";
 import hutLogo from "../../../assets/hut.jpg";
 import Icon from "../../helpers/Icon";
-import { ICONS } from "../../../global/contants";
+import { ICONS } from "../../../global/constants";
 
 class NavMenu extends Component {
   state = {
     menuOpened: false
   };
 
-  toggleMenu = () => {
-    this.setState(prevState => {
-      return { menuOpened: !prevState.menuOpened };
-    });
+  openMenu = () => {
+    this.setState({ menuOpened: true });
+  };
+
+  closeMenu = e => {
+    this.setState({ menuOpened: false });
   };
 
   render() {
-    const menuStyle = this.state.menuOpened
-      ? {}
-      : {
-          transform: "translateY(-100%)",
-          opacity: 0
-        };
+    const menuOpened = this.state.menuOpened;
 
     return (
       <div className={classes.NavMenu}>
         <nav>
-          <img src={hutLogo} onClick={this.toggleMenu} />
-          <ul style={menuStyle}>
+          <img
+            src={hutLogo}
+            onMouseEnter={this.openMenu}
+            onMouseLeave={this.closeMenu}
+          />
+          <Icon
+            icon={ICONS.ARROW_RIGHT}
+            className={menuOpened ? classes.hidden : ""}
+          />
+          <ul
+            className={menuOpened ? "" : classes.hidden}
+            onMouseEnter={this.openMenu}
+            onMouseLeave={this.closeMenu}
+          >
             <li>Option1</li>
             <li>Option2</li>
             <li>Option3</li>

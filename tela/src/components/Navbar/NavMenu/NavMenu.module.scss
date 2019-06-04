@@ -5,37 +5,50 @@
   width: 50%;
 
   nav {
-
     height: 100%;
     display: flex;
+    align-items: center;
+    width: 100%;
 
-    img,
-    svg {
+    img {
       height: 100%;
       transition: .1s;
-      cursor: pointer;
+      z-index: 1;
 
       &:hover {
         filter: brightness(103%);
       }
     }
 
-    width: 100%;
+    icon {
+      position: relative;
+      right: 5px;
+      transition: 0.3s;
+      fill: $hut-orange;
+    }
 
     ul {
+      position: relative;
+      right: 50px;
       display: flex;
       list-style: none;
-      transition: 0.3s;
+      transition: 0.8s;
 
       li {
         cursor: pointer;
         transition: 0.2s;
-        margin-right: 60px;
+        padding: 35px 25px;
+        color: $hut-gray;
 
         &:hover {
-          color: $hut-green;
+          color: $hut-orange;
         }
       }
     }
   }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-75px);
 }
