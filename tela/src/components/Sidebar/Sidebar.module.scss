@@ -1,8 +1,9 @@
 @import "../../global/variables.scss";
 
 .Sidebar {
-  background-color: $hut-gray;
+  background-color: $hut-gray-dark-1;
   width: 6vw;
+  height: 100%;
 }
 
 .SidebarLink {
@@ -12,15 +13,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(white, 0.1);
+
 
   [icon] svg {
-    fill: $hut-orange;
+    fill: $hut-gray-light-2;
     width: 5vh;
   }
 
   span {
-    color: $hut-orange;
+    color: white;
     margin-top: 0.1vh;
-    font-size: 1.4vh;
+    font-size: 1.3vh;
+  }
+
+  &:hover {
+    background-color: $hut-gray;
+  }
+
+  &.selected {
+    background-color: $hut-gray-dark-2;
+
+    [icon] svg,
+    span {
+      fill: $hut-green;
+      color: $hut-green
+    }
   }
 }
