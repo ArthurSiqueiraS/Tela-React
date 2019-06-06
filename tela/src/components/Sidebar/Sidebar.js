@@ -1,25 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
 import classes from "./Sidebar.module.scss";
+import Icon from "../helpers/Icon";
+import { ICONS } from "../../global/constants";
 
-const sidebar = () => {
+class Sidebar extends Component {
+  render() {
+    return (
+      <div className={classes.Sidebar}>
+        <SidebarLink icon={ICONS.STAR} />
+        <SidebarLink icon={ICONS.STAR} />
+        <SidebarLink icon={ICONS.STAR} />
+        <SidebarLink icon={ICONS.STAR} />
+      </div>
+    );
+  }
+}
+
+const SidebarLink = props => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="/keymetrics">KeyMetrics</a>
-        </li>
-        <li>
-          <a href="/segments">Segments</a>
-        </li>
-        <li>
-          <a href="/campaigns">Campaigns</a>
-        </li>
-        <li>
-          <a href="/Settings">Settings</a>
-        </li>
-      </ul>
-    </nav>
+    <div className={classes.SidebarLink}>
+      <Icon icon={props.icon} />
+      <span>Key Metrics</span>
+    </div>
   );
 };
 
-export default sidebar;
+export default Sidebar;

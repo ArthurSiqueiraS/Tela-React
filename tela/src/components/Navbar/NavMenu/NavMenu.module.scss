@@ -22,14 +22,14 @@
 
     [icon] {
       position: relative;
-      right: 5px;
+      right: 0.5vh;
       transition: 0.3s;
       fill: $hut-orange;
     }
 
     ul {
       position: relative;
-      right: 50px;
+      right: 5vh;
       display: flex;
       list-style: none;
       transition: 0.8s;
@@ -37,7 +37,7 @@
       li {
         cursor: pointer;
         transition: 0.2s;
-        padding: 35px 25px;
+        padding: 3.5vh 2.5vh;
 
         &:hover {
           color: $hut-orange;
@@ -49,5 +49,5 @@
 
 .hidden {
   opacity: 0;
-  transform: translateX(-75px);
+  transform: translateX(-10vh);
 }

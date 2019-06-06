@@ -5,36 +5,36 @@
   top: 0;
   right: 0;
   background-color: white;
-  box-shadow: 0px 2px 4px rgba(black, 0.15);
-  width: 210px;
+  box-shadow: 0 0.2vh 0.4vh rgba(black, 0.15);
+  width: 21vh;
   transition: 0.5s;
 
   .info {
     display: flex;
     flex-direction: column;
-    padding: 20px 25px 0px;
+    padding: 2vh 2.5vh 0;
 
     img {
-      width: 65px;
-      height: 65px;
+      width: 7vh;
+      height: 7vh;
       object-fit: cover;
       border-radius: 50%;
     }
 
     .extraInfo {
-      padding: 10px 0px;
+      padding: 1vh 0;
       position: relative;
-      right: 5px;
+      right: 0.5vh;
 
       .menuItem {
         display: flex;
         align-items: center;
-        padding-right: 10px;
-        font-size: 14px;
+        padding-right: 1vh;
+        font-size: 1.4vh;
 
         [icon] svg {
-          width: 22px;
-          margin-right: 2px;
+          width: 2.2vh;
+          margin-right: 0.2vh;
           fill: $hut-gray;
         }
       }
@@ -42,17 +42,17 @@
   }
 
   .menu {
-    padding-right: 10px;
+    padding-right: 1vh;
 
     .menuItem {
       display: flex;
       align-items: center;
-      padding-top: 10px;
+      padding-top: 1vh;
       cursor: pointer;
 
       [icon] svg {
-        width: 28px;
-        padding: 3px 7px;
+        width: 2.8vh;
+        padding: 0.3vh 0.7vh;
       }
 
       &:hover {
@@ -65,5 +65,5 @@
 }
 
 .hidden {
-  transform: translateY(-105%);
+  transform: translateY(-105vh);
 }

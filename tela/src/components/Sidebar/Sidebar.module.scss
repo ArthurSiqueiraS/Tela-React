@@ -1,1 +1,26 @@
-@import '../../global/variables.scss';
+@import "../../global/variables.scss";
+
+.Sidebar {
+  background-color: $hut-gray;
+  width: 6vw;
+}
+
+.SidebarLink {
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  [icon] svg {
+    fill: $hut-orange;
+    width: 5vh;
+  }
+
+  span {
+    color: $hut-orange;
+    margin-top: 0.1vh;
+    font-size: 1.4vh;
+  }
+}
