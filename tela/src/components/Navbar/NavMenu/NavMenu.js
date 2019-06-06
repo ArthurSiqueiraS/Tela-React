@@ -25,6 +25,7 @@ class NavMenu extends Component {
         <nav>
           <img
             src={hutLogo}
+            alt="Hut8 Logo"
             onMouseEnter={this.openMenu}
             onMouseLeave={this.closeMenu}
           />

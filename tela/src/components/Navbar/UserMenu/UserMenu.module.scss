@@ -1,1 +1,19 @@
-.UserMenu {}
+@import '../../../global/variables.scss';
+
+.UserMenu {
+  display: flex;
+  align-items: center;
+
+  [trigger] {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+
+    [icon] {
+      position: relative;
+      top: 2px;
+      fill: $hut-orange;
+    }
+  }
+}
