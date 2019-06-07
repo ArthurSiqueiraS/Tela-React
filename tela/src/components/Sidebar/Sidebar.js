@@ -1,35 +1,20 @@
 import React, { Component } from "react";
 import classes from "./Sidebar.module.scss";
 import Icon from "../helpers/Icon";
-import { ICONS } from "../../global/constants";
 
-class Sidebar extends Component {
-  state = {
-    links: [
-      { icon: ICONS.BRIEFCASE, name: "Key Metrics" },
-      { icon: ICONS.STAR, name: "Key Metric" },
-      { icon: ICONS.STAR, name: "Key Metric" },
-      { icon: ICONS.STAR, name: "Key Metric" }
-    ],
-    selected: false
-  };
-
-  selectLink = i => {
-    this.setState({ selected: i });
-  };
-
+class Content extends Component {
   render() {
-    const { links, selected } = this.state;
+    const { pages, currentPage, selectLink } = this.props;
 
     return (
       <div className={classes.Sidebar}>
-        {links.map((link, i) => {
+        {pages.map((link, i) => {
           return (
             <SidebarLink
               icon={link.icon}
               name={link.name}
-              selected={selected === i}
-              onClick={this.selectLink.bind(this, i)}
+              selected={currentPage === i + 1}
+              onClick={selectLink.bind(this, i + 1)}
               key={i}
             />
           );
@@ -47,10 +32,10 @@ const SidebarLink = props => {
 
   return (
     <div className={className} onClick={props.onClick}>
-      <Icon icon={props.icon} />
-      <span>Key Metrics</span>
+      <Icon icon={props.icon} viewBox={"0 0 20 20"} />
+      <span>{props.name}</span>
     </div>
   );
 };
 
-export default Sidebar;
+export default Content;

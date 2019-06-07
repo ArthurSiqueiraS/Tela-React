@@ -53,7 +53,7 @@ class UserNav extends Component {
         <div className={classes.menu}>
           <MenuItem text="Perfil" icon={ICONS.PROFILE} />
           <MenuItem text="Projetos" icon={ICONS.BRIEFCASE} />
-          <MenuItem text="Configurações" icon={ICONS.SETTINGS} />
+          <MenuItem text="Configurações" icon={ICONS.COGWHEEL} />
           <MenuItem text="Sair" icon={ICONS.QUIT} />
         </div>
       </div>
