@@ -1,41 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import classes from "./Sidebar.module.scss";
-import Icon from "../helpers/Icon";
+import IconLink from "../helpers/IconLink";
 
-class Content extends Component {
-  render() {
-    const { pages, currentPage, selectLink } = this.props;
+const Sidebar = props => {
+  const { pages, currentPage, selectLink } = props;
+  const links = pages.map((link, i) => {
+    let className = classes.link;
+    if (currentPage === i + 1) {
+      className = [className, classes.selected].join(" ");
+    }
 
     return (
-      <div className={classes.Sidebar}>
-        {pages.map((link, i) => {
-          return (
-            <SidebarLink
-              icon={link.icon}
-              name={link.name}
-              selected={currentPage === i + 1}
-              onClick={selectLink.bind(this, i + 1)}
-              key={i}
-            />
-          );
-        })}
+      <div className={className} onClick={selectLink.bind(this, i + 1)} key={i}>
+        <IconLink icon={link.icon} text={link.name} viewBox={"0 0 20 20"} />
       </div>
     );
-  }
-}
+  });
 
-const SidebarLink = props => {
-  let className = classes.SidebarLink;
-  if (props.selected) {
-    className = [className, classes.selected].join(" ");
-  }
-
-  return (
-    <div className={className} onClick={props.onClick}>
-      <Icon icon={props.icon} viewBox={"0 0 20 20"} />
-      <span>{props.name}</span>
-    </div>
-  );
+  return <div className={classes.Sidebar}>{links}</div>;
 };
 
-export default Content;
+export default Sidebar;

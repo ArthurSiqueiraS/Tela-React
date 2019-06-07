@@ -11,15 +11,31 @@ import { ICONS } from "../../global/constants";
 class Content extends Component {
   state = {
     pages: [
-      { name: "Home", icon: null, component: <Home /> },
       {
-        name: "Key Metrics",
+        name: "Home",
+        icon: null,
+        component: <Campaigns />
+      },
+      {
+        name: "Key Metrics ",
         icon: ICONS.KEY_METRICS,
         component: <KeyMetrics />
       },
-      { name: "Segments", icon: ICONS.SEGMENTS, component: <Segments /> },
-      { name: "Campaigns", icon: ICONS.CAMPAIGNS, component: <Campaigns /> },
-      { name: "Settings", icon: ICONS.SETTINGS, component: <Settings /> }
+      {
+        name: "Segments",
+        icon: ICONS.SEGMENTS,
+        component: <Segments />
+      },
+      {
+        name: "Campaigns",
+        icon: ICONS.CAMPAIGNS,
+        component: <Campaigns />
+      },
+      {
+        name: "Settings",
+        icon: ICONS.SETTINGS,
+        component: <Settings />
+      }
     ],
     currentPage: 0
   };

@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../helpers/Card";
 import NavMenu from "./NavMenu/NavMenu";
 import UserNav from "./UserMenu/UserMenu";
 import classes from "./Navbar.module.scss";
@@ -12,10 +13,10 @@ const navbar = props => {
   };
 
   return (
-    <div className={classes.Navbar}>
+    <Card className={classes.Navbar}>
       <NavMenu />
       <UserNav user={user} />
-    </div>
+    </Card>
   );
 };
 

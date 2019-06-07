@@ -23,6 +23,16 @@ code {
   width: 100%;
 }
 
-[icon] svg {
-  width: 3.5vh;
+[icon] {
+  text-align: center;
+
+  svg {
+    width: 3.5vh;
+  }
+}
+
+[card] {
+  box-shadow: 0vh 1vh 2vh 0.5vh rgba($hut-gray-dark-1, 0.2);
+  width: min-content;
+  padding: 1.5vh;
 }
