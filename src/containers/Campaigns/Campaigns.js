@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MenuCards from "../../components/MenuCards/MenuCards";
 import classes from "./Campaigns.module.scss";
-import { Icons, ICONS } from "../../global/constants";
+import { ICONS } from "../../global/constants";
 
 class Campaigns extends Component {
   state = {

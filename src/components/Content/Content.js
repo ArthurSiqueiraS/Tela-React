@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import classes from "./Content.module.scss";
 import Sidebar from "../Sidebar/Sidebar";
-import Home from "../Home/Home";
 import KeyMetrics from "../../containers/KeyMetrics/KeyMetrics";
 import Segments from "../../containers/Segments/Segments";
 import Campaigns from "../../containers/Campaigns/Campaigns";
